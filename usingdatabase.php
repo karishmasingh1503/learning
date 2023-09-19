@@ -5,7 +5,9 @@
 	$database="learning";
 	/* Here is how to connect to database (Database se connect karne k liye function) */
 	$conn = mysqli_connect($host,$user,$password,$database) or die("Invalid credentials");
+
 	$slug="";
+	
 	if(isset($_GET['slug']) && $_GET['slug']!=''){
 		$slug=$_GET['slug'];
 		$query="SELECT * FROM model WHERE status=1 AND brand_id='".$slug."' ORDER BY name";
