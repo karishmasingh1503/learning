@@ -45,8 +45,10 @@
 
     $address_of_user = $contact_person.", "."<br>".$house_no." - ". $floor.", ". $building_name.",<br>".$street.",<br/>".$area." - ".$city.",<br>".$distrcit." - (".$pincode."),<br>".$state." - ".$country;
 
-    echo $address_of_user;
-
+    //echo $address_of_user;
+	foreach($_POST as $key => $val){
+		echo $key." = ".$val."<br/>";
+	}
 
 ?>
 <style>
@@ -66,25 +68,33 @@
 <div style="min-width:100%">
 	<div style="margin-top:50px;width:25%;display:inline-block;">&nbsp;</div>
 	<div style="width:50%;margin-top:50px;display:inline-block;" class="input-fields">
-		<h2>Enter You Full Address For Getting Free Iphone 14 Pro</h2>
+		<h2>Enter You Full Address  </h2>
 		<form method="post" action="">
-			<h4>Contact Person<h4>
-			<input type="text" name="contact_person" id="contact_person" placeholder="Enter your full name" value="" required><br/>
+			<h4>First Name<h4>
+			<input type="text" name="first_name" id="first_name" placeholder="Enter your first name" minlength="3" maxlength="20" pattern="([A-Za-z])*" value="" required><br/>
+			<h4>Middle Name<h4>
+			<input type="text" name="middle_name" id="middle_name" placeholder="Enter your middle name" minlength="3" maxlength="20" pattern="([A-Za-z])*" value="" required><br/>
+			<h4>Last Name<h4>
+			<input type="text" name="last_name" id="last_name" placeholder="Enter your last name" minlength="3" maxlength="20" pattern="([A-Za-z])*" value="" required><br/>
+			
+			
+			<h4>Mobile#<h4>
+			<input type="text" name="mobile_no" id="mobile_no" placeholder="8077597688" minlength="10" maxlength="10" pattern="[6-9]([0-9])*" value="" required><br/>
 			
 			<h4>House#<h4>
-			<input type="text" name="house_no" id="house_no" placeholder="Enter Your House Number" value="" required><br/>
+			<input type="text" name="house_no" id="house_no" placeholder="Enter Your House Number" minlength="1" maxlength="10" pattern="([A-Za-z0-9-/])*" value="" required><br/>
 			
 			<h4>Floor<h4>
-			<input type="text" name="floor" id="floor" value="" placeholder="Floor on which you stay" required><br/>
+			<input type="text" name="floor" id="floor" value="" placeholder="Floor on which you stay" minlength="1" maxlength="10" pattern="([A-Za-z0-9-\s])*" required><br/>
 			
 			<h4>Building Name<h4>
-			<input type="text" name="building_name" id="building_name" placeholder="Your Building Name" value="" required><br/>
+			<input type="text" name="building_name" id="building_name" placeholder="Your Building Name" value="" minlength="3" maxlength="20" pattern="([A-Za-z])*" required><br/>
 			
 			<h4>Street/Colony/Village<h4>
-			<input type="text" name="street" id="street" value="" placeholder="Enter Street/Colony/Village of yours" required><br/>
+			<input type="text" name="street" id="street" value="" placeholder="Enter Street/Colony/Village of yours" minlength="3" maxlength="50" pattern="([A-Za-z])*" required><br/>
 			
 			<h4>Area/Nearby<h4>
-			<input type="text" name="area" id="area" value="" placeholder="Enter Area/Nearby Mark" required><br/>
+			<input type="text" name="area" id="area" value="" placeholder="Enter Area/Nearby Mark" minlength="3" maxlength="50" pattern="([A-Za-z])*" required><br/>
 			
 			<h4>Country<h4>
 			<select name="country" id="country"  required>
@@ -114,10 +124,22 @@
 			<select><br/>
 			
 			<h4>District<h4>
-			<input type="text" name="distrcit" id="distrcit" placeholder="What is your District" value="" required><br/>
+			<input type="text" name="distrcit" id="distrcit" placeholder="What is your District" minlength="3" maxlength="20" pattern="([A-Za-z-\s])*" value="" required><br/>
 			
 			<h4>Pincode<h4>
-			<input type="number" min="100000" max="999999" name="pincode" id="pincode" placeholder="Enter your 6 digit pin code" value="" required><br/><br/>
+			<input type="number" placeholder="202001" id="pincode" maxlength="6" minlength="6" min="100000" value="" required><br/><br/>
+			
+			<h4>Gender<h4>
+			<input type="radio" style="height:15px;width:15px;" name="gender" id="gender_male" value="Male" checked required>&nbsp;Male&nbsp;&nbsp;
+			<input type="radio" style="height:15px;width:15px;" name="gender" id="gender_female" value="Female" required>&nbsp;Female&nbsp;&nbsp;
+			<input type="radio" style="height:15px;width:15px;" name="gender" id="gender_other" value="Other" required>&nbsp;Other&nbsp;&nbsp;
+			<br/><br/>
+			<h4>Skills<h4>
+			<input type="checkbox" style="height:15px;width:15px;" name="skills[]" id="skills_1" value="PHP" >&nbsp;PHP&nbsp;&nbsp;
+			<input type="checkbox" style="height:15px;width:15px;" name="skills[]" id="skills_2" value="JAVA" >&nbsp;JAVA&nbsp;&nbsp;
+			<input type="checkbox" style="height:15px;width:15px;" name="skills[]" id="skills_3" value="HTML" >&nbsp;HTML&nbsp;&nbsp;
+			<input type="checkbox" style="height:15px;width:15px;" name="skills[]" id="skills_4" value="PYTHON" >&nbsp;PYTHON&nbsp;&nbsp;
+			<br/><br/>
 			
 			<input type="submit" value="Save Details" name="submit">
 		</form>	
