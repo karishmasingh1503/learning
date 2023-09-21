@@ -35,11 +35,14 @@
 <div style="min-width:100%">
 	<div style="margin-top:50px;width:25%;display:inline-block;">&nbsp;</div>
 	<div style="width:50%;margin-top:50px;display:inline-block;" class="input-fields">
-		<h2>Enter You Full Address For Getting Free Iphone 14 Pro</h2>
+		<h2>Enter You Full address </h2>
 		<form method="post" action="">
 			<h4>Contact Person<h4>
+			<input type="test" name="contact_person" id="contact_person" placeholder="Enter your first name" value="" required><br/>
+			<h4>Contact Person<h4>
+			<input type="text" name="contact_person" id="contact_person" placeholder="Enter your last name" value="" required><br/>
+			<h4>Contact Person<h4>
 			<input type="text" name="contact_person" id="contact_person" placeholder="Enter your full name" value="" required><br/>
-			
 			<h4>House#<h4>
 			<input type="text" name="house_no" id="house_no" placeholder="Enter Your House Number" value="" required><br/>
 			
