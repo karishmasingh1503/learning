@@ -64,6 +64,46 @@
     //printTable(3);
     //printTable(999);
     countings(1,10);
-    
+    function alphabet($start_type='A',$end_type='Z'){
+        for($char=ord($start_type);$char<=ord($end_type);++$char){
+            //echo $char;
+            echo chr($char)." ";
+        }
+    }
+    function alphabet_other_way($start=90,$end=65){
+        for($start=$start;$start<=$end;++$start){
+            echo chr($start)." ";
+        }
+    }
+    echo "<br/>alphabet of ";
+    alphabet('a','z');
+    echo "<br/>";
+    //ord() alphabet -> number
+    //chr() number -> alphabet
+    //ASCII STANDARD -> 
+    //A->65
+    //a -> 97
+    /* Write a program to reverse the string 'TheGrandHotel' */
+    function string_reverse($string){
+        $word_array=str_split($string); 
+        for($start=count($word_array)-1;$start>=0;$start--){
+            echo $word_array[$start];
+        }  
+    }
+    string_reverse('TheGrandHotel');
+    echo "<br/>";
 
+
+    /** THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG */
+    /** REVERSE THE STRING -1 and Reverse the words of string -2 */
+    string_reverse('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG');
+    echo "<br/>";
+    function word_reverse($string){
+        $words_array=explode(" ",$string);
+        for($start=count($words_array)-1;$start>=0;$start--){
+            echo $words_array[$start]." ";
+        }
+    }
+    word_reverse('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG');
+    echo '<br/>';
 ?>
