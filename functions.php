@@ -106,4 +106,11 @@
     }
     word_reverse('THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG');
     echo '<br/>';
+
+    /** PROBLEM -1 -> REVERSE THE WORDS BY REVERSING CHARACTERS OF IT */
+    /** Output : GOD YZAL EHT REVO SPMUJ XOF NWORB KCIUQ EHT  */
+
+    /** PROBLEM -2 -> Print THE String BY REVERSING CHARACTERS OF Its Every Word */
+    /** EHT KCIUQ NWORB XOF SPMUJ REVO EHT YZAL GOD */
+
 ?>
